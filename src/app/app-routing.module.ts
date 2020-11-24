@@ -5,7 +5,7 @@ import { LiveUpdateComponent } from './crick-info/live-update/live-update.compon
 import { ResultComponent } from './crick-info/result/result.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '', redirectTo: 'home/live-update', pathMatch: 'full'},
   {
     path: 'home',
     component: CrickInfoComponent,

@@ -1,0 +1,86 @@
+.tab-content{
+    padding: 10px 0 15px 0;
+    height: 130px;
+}
+.tbBorder{
+    border-bottom: 1px solid #e0e0e0;
+}
+.tab-content > td {
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+.matchname{
+    margin-left: 16px;
+    font-weight: 700;
+    font-size: 12px;
+}
+.status{
+    font-size: 10pt;
+    background-color: #006442;
+    font-weight: 700;
+    color: #fff;
+    padding: 6px 10px 8px 10px ;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    margin: 0 10px 0 10px;
+}
+.status::before{
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: -5px;
+    width: 40px;
+    height: 40px;
+    background: #006442;
+    border-radius: 50%;
+    z-index: -1;
+}
+.liveStatus{
+    margin-top: 10px;
+    background-color: #F26B23 !important;
+}
+.liveStatus::before{
+    background-color: #F26B23  !important;
+    top: -5px !important;
+}
+.venue{
+    font-size: 13px;
+    padding: 5px 40px 0 40px;
+}
+.team{
+    font-weight: 700;
+    padding: 0 10px 0 10px;
+}
+.teamlogo{
+    max-width: 70px;
+    max-height: 70px;
+}
+.vs{
+    font-weight: 700;
+}
+.result-team-logo{
+    max-width: 80px;
+    max-height: 80px;
+}
+.date{
+    font-weight: 700;
+    font-size: 15px;
+}
+.live-date{
+    font-weight: 700;
+    font-size: 15px;
+    color: #F26B23
+}
+.Live{
+    color: #F26B23;
+}
+.Upcoming{
+    color: #006442;
+}
+.arrow{
+    color: #1892ed;
+}
+.hr {
+    border-bottom: 2px solid #006442;
+}

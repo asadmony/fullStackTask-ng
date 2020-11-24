@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrickInfoService } from '../crick-info.service';
 
 @Component({
   selector: 'app-result',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResultComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private crickService: CrickInfoService) { }
+  results: any;
   ngOnInit(): void {
+    this.crickService.getResults().subscribe(res => {
+      this.results = res.response.items;
+    })
   }
 
 }
