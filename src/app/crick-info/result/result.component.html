@@ -1,7 +1,27 @@
-<div class="container">
+<div class="container contents">
   <table>
-    <tr>
-
+    <tr *ngFor="let result of results">
+      <td>
+        <h4 class="team">{{ result.teama.name }}</h4>
+        <p>{{ result.teama.scores_full }}</p>
+      </td>
+      <td>
+        <img class="rounded result-team-logo" src="{{ result.teama.logo_url }}">
+      </td>
+      <td>
+        <h5 class="matchname">{{ result.subtitle }}</h5>
+        <p></p>
+      </td>
+      <td>
+        <img class="rounded result-team-logo" src="{{ result.teamb.logo_url }}">
+      </td>
+      <td>
+        <h4 class="team">{{ result.teamb.name }}</h4>
+        <p>{{ result.teamb.scores_full }}</p>
+      </td>
+      <td>
+        <i class="fa fa-long-arrow-right"></i>
+      </td>
     </tr>
   </table>
 </div>

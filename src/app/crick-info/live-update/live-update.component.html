@@ -1,5 +1,5 @@
-<div class="container">
-<table>
+<div class="container contents my-2">
+<table class="livetable">
   <tr class="row" ngClass="tab-content" *ngFor="let match of matches" >
     <td width="22%">
       <h5 ngClass="matchname">{{ match.subtitle }}</h5>
@@ -26,6 +26,7 @@
     <td width="13%">
       {{ dateformat(match.date_start) }}
     </td>
+    <hr class="hr">
   </tr>
 </table>
 </div>
