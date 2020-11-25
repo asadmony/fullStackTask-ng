@@ -14,4 +14,4 @@ Node package manager (npm) need to be installed on your system to run this appli
     2. Run command "git clone https://github.com/asadmony/fullStackTask-ng.git"
     3. Drive into the fullStackTask folder by running command "cd fullStackTask-ng"
     4. Run command "npm install" . It will install all dependencies.
-    5. Run command "ng serve" this will run the Development Server and you'll see a link on your Command Prompt or Terminal. Generally it is http://127.0.0.1:8000 .Put the url on your browser to run the Application
+    5. Run command "ng serve" this will run the Development Server and you'll see a link on your Command Prompt or Terminal. Generally it is http://localhost:4200/ .Put the url on your browser to run the Application
