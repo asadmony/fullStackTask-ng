@@ -7,13 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrickInfoComponent implements OnInit {
   constructor() { }
-  ngOnInit(): void {
-  }
-  live: boolean;
-  result: boolean;
-  button(){
+  live : boolean = true;
+
+  tabbutton() {
     this.live = !this.live
-    this.result = !this.result
+  }
+  ngOnInit(): void {
   }
 
 }

@@ -1,15 +1,19 @@
 <div class="container contents my-2">
 <table class="livetable">
-  <tr class="row" ngClass="tab-content" *ngFor="let match of matches" >
+  <tr class="tab-content" *ngFor="let match of matches" [ngClass]="{hr: matches.length > 1 && match.match_id != matches[matches.length-1].match_id}" >
     <td width="22%">
-      <h5 ngClass="matchname">{{ match.subtitle }}</h5>
-      <p>{{ match.venue.name }}, {{ match.venue.location }}
+      <h5 ngClass="matchname text-left">
+        <span class="status" [ngClass]="{hide: match.status === 3}">UPCOMING</span>
+        <span class="status liveStatus hide" [ngClass]="{show: match.status === 3}">LIVE</span>
+        {{ match.subtitle }}
+      </h5>
+      <p class="venue" >{{ match.venue.name }}, {{ match.venue.location }}
         <br>
         {{ match.date_start }}
       </p>
     </td>
     <td width="20%">
-      {{ match.teama.name }}
+      <h5 class="team">{{ match.teama.name }}</h5>
     </td>
     <td width="10%">
       <img class="teamlogo" src="{{ match.teamb.logo_url }}">
@@ -20,13 +24,11 @@
     <td width="10%">
       <img ngClass="teamlogo" src="{{ match.teamb.logo_url }}" >
     </td>
-    <td width="20%">
-      {{ match.teamb.name }}
+      <td width="20%"><h5 class="team">{{ match.teamb.name }}</h5>
     </td>
     <td width="13%">
       {{ dateformat(match.date_start) }}
     </td>
-    <hr class="hr">
   </tr>
 </table>
 </div>

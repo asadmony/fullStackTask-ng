@@ -11,7 +11,7 @@ export class LiveUpdateComponent implements OnInit {
   constructor(private crickService: CrickInfoService) { }
   matches: any;
   ngOnInit(): void {
-    this.crickService.getLiveUpdate().subscribe(res => {
+    this.crickService.getUpcomingUpdate().subscribe(res => {
       this.matches = res.response.items;
     })
   }

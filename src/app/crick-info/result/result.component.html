@@ -1,6 +1,6 @@
 <div class="container contents">
   <table>
-    <tr *ngFor="let result of results">
+    <tr class="tab-content" *ngFor="let result of results" [ngClass]="{hr: results.length > 1 && result.match_id != results[results.length-1].match_id}">
       <td>
         <h4 class="team">{{ result.teama.name }}</h4>
         <p>{{ result.teama.scores_full }}</p>

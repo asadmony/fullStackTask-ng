@@ -1,10 +1,10 @@
 <div class="container main">
-<div class="nav nav-tabs">
-  <button ngClass="nav-link active" [routerLink]="['live-update']">Live & Upcoming</button>
-  <button ngClass="nav-link"  [routerLink]="['result']" >Result</button>
-</div>
+  <div class="nav nav-tabs">
+    <button class="nav-link"  [routerLink]="['live-update']" (click)="tabbutton()" [class]="{active: live === true}">Live & Upcoming</button>
+    <button class="nav-link"  [routerLink]="['result']" (click)="tabbutton()" [ngClass]="{active: live === false}">Result</button>
+  </div>
 
-  <div>
+  <div ngClass="tabs">
     <router-outlet></router-outlet>
   </div>
 </div>
