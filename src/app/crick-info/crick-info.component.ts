@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class CrickInfoComponent implements OnInit {
   constructor() { }
   live : boolean = true;
+  result : boolean = false;
 
-  tabbutton() {
-    this.live = !this.live
+  tablivebutton() {
+    this.live = true
+    this.result = false
+  }
+  tabresultbutton() {
+    this.live = false
+    this.result = true
   }
   ngOnInit(): void {
   }
